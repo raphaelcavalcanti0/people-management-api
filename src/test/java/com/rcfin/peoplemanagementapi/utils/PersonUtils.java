@@ -1,5 +1,7 @@
 package com.rcfin.peoplemanagementapi.utils;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rcfin.peoplemanagementapi.dto.request.PersonDTO;
 import com.rcfin.peoplemanagementapi.models.Person;
 
@@ -19,7 +21,7 @@ public class PersonUtils {
                 .firstName(FIRST_NAME)
                 .lastName(LAST_NAME)
                 .cpf(CPF_NUMBER)
-                .birthDate("10-10-2010")
+                .birthDate("2010-10-10")
                 .phones(Collections.singletonList(PhoneUtils.createFakeEntity()))
                 .build();
     }
@@ -33,5 +35,10 @@ public class PersonUtils {
                 .birthDate(BIRTH_DATE)
                 .phones(Collections.singletonList(PhoneUtils.createFakeEntity()))
                 .build();
+    }
+
+    public static String asJsonString(PersonDTO personDTO) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.writeValueAsString(personDTO);
     }
 }
