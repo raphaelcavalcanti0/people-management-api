@@ -4,7 +4,7 @@
 
 This REST API was developed as a hands-on programming exercise, using Java Spring + H2 SQL Database + Heroku deploy.
 
-Implements the main HTTP methods: <code>GET</code>, <code>POST</code>, <code>PUT</code> and <code>DELETE</code>. Assisting in creating, updating, querying and removing data with CPF validation. 
+Implements the main HTTP methods: <code>GET</code>, <code>POST</code>, <code>PUT</code> and <code>DELETE</code>. Assisting in creating, reading, updating and deleting data (CRUD) with CPF validation. 
 
 ## Base URL
 
